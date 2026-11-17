@@ -343,6 +343,19 @@
       .disclaimer { font-size: 12.5px; color: var(--ink-3); line-height: 1.75; margin-top: 16px; }
       .disclaimer p { margin: 0 0 6px; }
 
+
+      .rec-reason { background: var(--accent-soft); border-radius: 12px; padding: 12px 13px; font-size: 13.5px !important; line-height: 1.75; color: var(--ink-2) !important; margin-top: 10px !important; }
+      .rec-reason strong { color: var(--ink); }
+      .rec-score { display:inline-block; font-size:11.5px; font-weight:900; background: var(--ink); color: var(--bg); border-radius:999px; padding:2px 9px; margin-left:6px; vertical-align:2px; }
+      .sim-comment { background: var(--bg-soft); border-radius: 14px; padding: 16px 18px; margin-top: 16px; }
+      .sim-comment h4 { margin:0 0 8px; font-size:14px; font-weight:900; }
+      .sim-comment p { margin:0 0 8px; font-size:14px; color: var(--ink-2); line-height:1.75; }
+      .sim-comment p:last-child{margin-bottom:0}
+      .sim-premise { background: var(--surface); border:1px dashed var(--line); border-radius:14px; padding:14px 16px; margin-top:16px; font-size:13px; color: var(--ink-2); line-height:1.75; }
+      .sim-premise strong{color:var(--ink)}
+      .sim-premise ul{margin:6px 0 0; padding-left:18px}
+      .handler-note{font-size:13px;color:var(--ink-3);margin:6px 0 0;line-height:1.6}
+
       /* ---------- Material request step form ---------- */
       .btn-material { background: var(--btn-material); color: #fff; border-color: var(--btn-material); cursor: pointer; font-family: inherit; }
       .btn-material:hover { opacity: .9; }
@@ -473,12 +486,85 @@
       .detail-block h4 { font-size: 13px; font-weight: 900; letter-spacing: .04em; color: var(--ink-3); margin: 0 0 8px; }
       .detail-block ul { margin: 0 0 10px; padding: 0 0 0 18px; color: var(--ink-2); font-size: 14.5px; line-height: 1.75; }
       .detail-block p { margin: 0 0 10px; color: var(--ink-2); font-size: 14.5px; }
+      .future-block {
+        background: var(--accent-soft);
+        border-radius: 14px;
+        padding: 18px 16px 16px;
+        margin: 4px 0 16px;
+      }
+      .future-block h4 {
+        font-size: 14px; font-weight: 900; letter-spacing: .03em;
+        color: var(--accent-ink); margin: 0 0 12px; line-height: 1.5;
+      }
+      .future-row { margin: 0 0 12px; }
+      .future-row:last-of-type { margin-bottom: 10px; }
+      .future-label {
+        display: inline-block; font-size: 11.5px; font-weight: 900; letter-spacing: .05em;
+        border-radius: 999px; padding: 2px 10px; margin: 0 0 6px;
+      }
+      .future-label.now { background: var(--surface); border: 1px solid var(--line); color: var(--ink-2); }
+      .future-label.after { background: var(--accent); color: #ffffff; }
+      .future-row p { margin: 0; color: var(--ink-2); font-size: 14.5px; line-height: 1.8; }
+      .future-row p strong { color: var(--ink); }
+      .future-cta { margin: 0; font-size: 13.5px; font-weight: 700; color: var(--ink); line-height: 1.7; border-top: 1px dashed var(--line); padding-top: 10px; }
+      .referral-future {
+        margin-top: 12px; padding-top: 12px; border-top: 1px dashed var(--line);
+      }
+      .referral-future p { margin: 0 0 8px; }
+      .referral-future .rf-label {
+        display: inline-block; font-size: 11.5px; font-weight: 900; letter-spacing: .05em;
+        background: var(--accent); color: #ffffff; border-radius: 999px; padding: 2px 10px; margin: 0 0 6px;
+      }
+      .referral-future .rf-cta { font-size: 13px; font-weight: 700; color: var(--ink); margin: 0; }
       .detail-price {
         margin-top: auto;
         font-size: 13.5px; font-weight: 700; color: var(--ink);
         background: var(--bg-soft); border-radius: 12px; padding: 12px 14px;
       }
       .detail-price span { font-weight: 500; color: var(--ink-2); }
+      .detail-price strong { font-size: 15px; }
+      .pack-note { font-size: 13px; color: var(--ink-3); margin: 10px 0 0; line-height: 1.7; }
+      /* Matsu-Take-Ume plan comparison */
+      .pack-card { grid-column: 1 / -1; }
+      .plan-compare { margin-top: 6px; }
+      .plan-compare-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 16px; margin: 0 0 6px; }
+      .plan-compare-head h4 { font-size: 13px; font-weight: 900; letter-spacing: .04em; color: var(--ink-3); margin: 0; }
+      .plan-initial { font-size: 13.5px; font-weight: 700; color: var(--ink); background: var(--bg-soft); border-radius: 999px; padding: 5px 12px; }
+      .plan-initial span { font-weight: 500; color: var(--ink-2); }
+      .plan-lead { font-size: 13.5px; color: var(--ink-2); line-height: 1.75; margin: 0 0 14px; }
+      .plan-grid { display: grid; gap: 12px; }
+      @media (min-width: 720px) { .plan-grid { grid-template-columns: repeat(3, 1fr); } }
+      .plan-card { border: 1.5px solid var(--line); border-radius: 16px; padding: 18px 16px 16px; background: var(--surface); display: flex; flex-direction: column; position: relative; }
+      .plan-card.recommended { border-color: var(--accent); background: var(--accent-soft); box-shadow: 0 4px 18px rgba(0,0,0,.06); }
+      .plan-badge { position: absolute; top: -11px; left: 16px; background: var(--accent); color: #fff; font-size: 11.5px; font-weight: 900; letter-spacing: .05em; border-radius: 999px; padding: 3px 12px; line-height: 1.5; }
+      .plan-name { font-size: 13px; font-weight: 900; letter-spacing: .06em; color: var(--ink-3); margin: 2px 0 4px; }
+      .plan-card.recommended .plan-name { color: var(--accent-ink); }
+      .plan-price { font-size: 26px; font-weight: 900; line-height: 1.2; margin: 0; }
+      .plan-price small { font-size: 13px; font-weight: 700; color: var(--ink-2); }
+      .plan-price-note { font-size: 12px; color: var(--ink-3); margin: 2px 0 12px; }
+      .plan-card ul { margin: 0; padding: 0 0 0 18px; color: var(--ink-2); font-size: 13.5px; line-height: 1.75; }
+      .plan-card ul li { margin-bottom: 4px; }
+      .plan-card ul li:last-child { margin-bottom: 0; }
+      .support-note { font-size: 13px; color: var(--ink-2); background: var(--bg-soft); border-radius: 12px; padding: 12px 14px; line-height: 1.75; margin: 14px 0 0; }
+      .support-note strong { color: var(--ink); }
+
+      /* One-off referral blocks */
+      .referral-head { margin-top: 40px; }
+      .referral-head h3 { font-size: clamp(19px, 3.4vw, 23px); font-weight: 900; margin: 0 0 8px; line-height: 1.5; }
+      .referral-head p { color: var(--ink-2); margin: 0 0 18px; max-width: 680px; }
+      .referral-grid { display: grid; gap: 14px; }
+      @media (min-width: 720px) { .referral-grid { grid-template-columns: 1fr 1fr; } }
+      .referral-card {
+        background: var(--bg-soft); border: 1px dashed var(--line);
+        border-radius: var(--radius); padding: 20px 20px 18px;
+      }
+      .referral-card .r-tag {
+        display: inline-block; font-size: 11.5px; font-weight: 900; letter-spacing: .05em;
+        background: var(--surface); border: 1px solid var(--line); color: var(--ink-2);
+        border-radius: 999px; padding: 2px 10px; margin: 0 0 10px;
+      }
+      .referral-card h4 { font-size: 16.5px; font-weight: 900; line-height: 1.5; margin: 0 0 6px; }
+      .referral-card p { margin: 0; color: var(--ink-2); font-size: 14px; line-height: 1.75; }
 
       /* Footer notes */
       .notes { font-size: 13px; color: var(--ink-3); padding: 8px 0 0; }
@@ -525,9 +611,9 @@
       <section id="diagnosis" class="section-tight" aria-labelledby="diag-h">
         <div class="wrap">
           <h2 id="diag-h">かんたん診断｜答えるだけで、おすすめが分かります</h2>
-          <p class="sec-lead">4つの質問に答えて「おすすめを見る」を押すと、会社の状況に合ったツールと進め方を、サービス紹介ページでご提案します。入力内容が送信・保存されることはありません。</p>
+          <p class="sec-lead">10の質問に答えて「おすすめを見る」を押すと、回答をスコアリングして優先順位つきで最大3件のおすすめを、サービス紹介ページでご提案します。各おすすめには、あなたの回答にひも付けた具体的な理由も表示します。入力内容が送信・保存されることはありません。</p>
           <div class="tool-panel">
-            <span class="tool-badge">STEPで選ぶだけ・約1分</span>
+            <span class="tool-badge">STEPで選ぶだけ・約2分｜スコアリング診断</span>
             <form id="diagForm" novalidate>
               <fieldset>
                 <legend>Q1. 会社の規模は？</legend>
@@ -550,7 +636,48 @@
                 </div>
               </fieldset>
               <fieldset>
-                <legend>Q3. 困っていることは？（複数選択可）</legend>
+                <legend>Q3. 現在の経理体制は？</legend>
+                <p class="field-hint">ふだん経理を主に担っている方を選んでください。</p>
+                <div class="choice-grid cols-2">
+                  <div class="choice"><input type="radio" name="structure" id="structure-self" value="self" checked /><label for="structure-self">経営者・代表が自分で処理</label></div>
+                  <div class="choice"><input type="radio" name="structure" id="structure-family" value="family" /><label for="structure-family">家族・パートタイマーが処理</label></div>
+                  <div class="choice"><input type="radio" name="structure" id="structure-staff" value="staff" /><label for="structure-staff">経理担当者がいる</label></div>
+                  <div class="choice"><input type="radio" name="structure" id="structure-out" value="outsourced" /><label for="structure-out">税理士・会計事務所に委託</label></div>
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend>Q4. 使っている会計ソフトは？</legend>
+                <p class="field-hint">現在お使いのものを1つ選んでください。</p>
+                <div class="choice-grid cols-2">
+                  <div class="choice"><input type="radio" name="software" id="software-none" value="none" checked /><label for="software-none">使っていない（手書き・Excel中心）</label></div>
+                  <div class="choice"><input type="radio" name="software" id="software-mf" value="mf" /><label for="software-mf">マネーフォワード クラウド</label></div>
+                  <div class="choice"><input type="radio" name="software" id="software-freee" value="freee" /><label for="software-freee">freee</label></div>
+                  <div class="choice"><input type="radio" name="software" id="software-yayoi" value="yayoi" /><label for="software-yayoi">弥生</label></div>
+                  <div class="choice"><input type="radio" name="software" id="software-other" value="other" /><label for="software-other">その他のソフト</label></div>
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend>Q5. 月の領収書・請求書の枚数目安は？</legend>
+                <p class="field-hint">受け取るもの＋発行するものの合計の目安で選んでください。枚数が多いほど自動取込の効果が出やすくなります。</p>
+                <div class="choice-grid cols-4">
+                  <div class="choice"><input type="radio" name="docVolume" id="doc-low" value="low" /><label for="doc-low">〜30枚</label></div>
+                  <div class="choice"><input type="radio" name="docVolume" id="doc-mid" value="mid" checked /><label for="doc-mid">31〜100枚</label></div>
+                  <div class="choice"><input type="radio" name="docVolume" id="doc-high" value="high" /><label for="doc-high">101〜300枚</label></div>
+                  <div class="choice"><input type="radio" name="docVolume" id="doc-vhigh" value="vhigh" /><label for="doc-vhigh">301枚以上</label></div>
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend>Q6. インボイス制度・電子帳簿保存法への対応状況は？</legend>
+                <p class="field-hint">現在の対応の進み具合を選んでください。</p>
+                <div class="choice-grid cols-2">
+                  <div class="choice"><input type="radio" name="lawStatus" id="law-done" value="done" /><label for="law-done">対応済み（電子保存までできている）</label></div>
+                  <div class="choice"><input type="radio" name="lawStatus" id="law-partial" value="partial" checked /><label for="law-partial">一部対応（請求書対応のみ等）</label></div>
+                  <div class="choice"><input type="radio" name="lawStatus" id="law-notyet" value="notyet" /><label for="law-notyet">まだ対応できていない</label></div>
+                  <div class="choice"><input type="radio" name="lawStatus" id="law-unknown" value="unknown" /><label for="law-unknown">何が必要か分からない</label></div>
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend>Q7. 困っていることは？（複数選択可）</legend>
                 <p class="field-hint">当てはまるものをすべて選んでください。未選択でも診断できます。</p>
                 <div class="choice-grid cols-2">
                   <div class="choice check"><input type="checkbox" name="concern" id="concern-invoice" value="invoice" /><label for="concern-invoice">請求書の発行・受取が手間</label></div>
@@ -561,7 +688,26 @@
                 </div>
               </fieldset>
               <fieldset>
-                <legend>Q4. 導入の希望時期は？</legend>
+                <legend>Q8. 経理以外で困っていることは？（複数選択可）</legend>
+                <p class="field-hint">経理以外のお困りごとも選んでください。電話代行やAI活用のご提案に反映します。</p>
+                <div class="choice-grid cols-2">
+                  <div class="choice check"><input type="checkbox" name="otherConcern" id="other-phone" value="phone" /><label for="other-phone">電話に出られず問い合わせを取りこぼす</label></div>
+                  <div class="choice check"><input type="checkbox" name="otherConcern" id="other-shortage" value="shortage" /><label for="other-shortage">人手不足で手が回らない</label></div>
+                  <div class="choice check"><input type="checkbox" name="otherConcern" id="other-sales" value="sales" /><label for="other-sales">集客・営業に時間が割けない</label></div>
+                  <div class="choice check"><input type="checkbox" name="otherConcern" id="other-aidoc" value="aidoc" /><label for="other-aidoc">資料作成・調べものに時間がかかる</label></div>
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend>Q9. 補助金活用への関心は？</legend>
+                <p class="field-hint">導入コストを抑える制度の活用について教えてください。</p>
+                <div class="choice-grid cols-2">
+                  <div class="choice"><input type="radio" name="subsidyInterest" id="subsidy-want" value="want" /><label for="subsidy-want">積極的に活用したい</label></div>
+                  <div class="choice"><input type="radio" name="subsidyInterest" id="subsidy-consider" value="consider" checked /><label for="subsidy-consider">使えるなら検討したい</label></div>
+                  <div class="choice"><input type="radio" name="subsidyInterest" id="subsidy-no" value="no" /><label for="subsidy-no">補助金にはこだわらない</label></div>
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend>Q10. 導入の希望時期は？</legend>
                 <p class="field-hint">検討の段階を教えてください。</p>
                 <div class="choice-grid cols-2">
                   <div class="choice"><input type="radio" name="timing" id="timing-now" value="now" /><label for="timing-now">すぐに導入したい</label></div>
@@ -683,11 +829,20 @@
       <section id="simulator" class="alt" aria-labelledby="sim-h">
         <div class="wrap">
           <h2 id="sim-h">シミュレーター｜経理にかかる時間とコスト</h2>
-          <p class="sec-lead">数字を動かすと、その場で試算が変わります。今の経理コストの目安と、クラウド化した場合の削減見込みを確認できます。</p>
+          <p class="sec-lead">担当者・枚数・外注費まで入れて試算すると、その場で内訳つきの結果が変わります。今の経理コストと、クラウド化した場合の削減見込みを、計算の前提を明示したうえで確認できます。前提条件により変わる目安です。</p>
           <div class="tool-panel">
             <span class="tool-badge">入力すると自動で計算</span>
             <div class="sim-layout">
               <div>
+                <div class="sim-field">
+                  <div class="sim-field-head"><label>経理を主に担っている方</label></div>
+                  <div class="choice-grid">
+                    <div class="choice"><input type="radio" name="simHandler" id="handler-owner" value="owner" checked /><label for="handler-owner">経営者本人（¥3,000/時間で換算）</label></div>
+                    <div class="choice"><input type="radio" name="simHandler" id="handler-employee" value="employee" /><label for="handler-employee">従業員（¥1,500/時間で換算）</label></div>
+                    <div class="choice"><input type="radio" name="simHandler" id="handler-out" value="outsourced" /><label for="handler-out">外部委託中心（¥2,000/時間で換算＋外注費）</label></div>
+                  </div>
+                  <p class="handler-note" id="simWagePremise">前提：経営者 ¥3,000/時間で計算しています。担当者を切り替えると時給換算も自動で切り替わります（金額は下で調整できます）。</p>
+                </div>
                 <div class="sim-field">
                   <div class="sim-field-head">
                     <label for="simHoursNum">月あたりの経理作業時間</label>
@@ -699,9 +854,9 @@
                 <div class="sim-field">
                   <div class="sim-field-head">
                     <label for="simWageNum">担当者の時給換算</label>
-                    <span class="sim-value"><input type="number" id="simWageNum" min="500" max="6000" step="100" value="1500" inputmode="numeric" /> 円</span>
+                    <span class="sim-value"><input type="number" id="simWageNum" min="500" max="6000" step="100" value="3000" inputmode="numeric" /> 円</span>
                   </div>
-                  <input type="range" id="simWage" min="500" max="6000" step="100" value="1500" aria-label="担当者の時給換算（スライダー）" />
+                  <input type="range" id="simWage" min="500" max="6000" step="100" value="3000" aria-label="担当者の時給換算（スライダー）" />
                   <div class="sim-range-labels"><span>500円</span><span>6,000円</span></div>
                 </div>
                 <div class="sim-field">
@@ -712,6 +867,32 @@
                   <input type="range" id="simDocs" min="0" max="1000" step="10" value="80" aria-label="請求書・領収書の月間枚数（スライダー）" />
                   <div class="sim-range-labels"><span>0枚</span><span>1,000枚</span></div>
                   <p class="field-hint">書類1枚あたりの処理・保管コストは1枚50円（目安）として計算します。</p>
+                </div>
+                <div class="sim-field">
+                  <div class="sim-field-head">
+                    <label for="simOutsourceNum">税理士・記帳代行への月額支払額</label>
+                    <span class="sim-value"><input type="number" id="simOutsourceNum" min="0" max="200000" step="1000" value="30000" inputmode="numeric" /> 円</span>
+                  </div>
+                  <input type="range" id="simOutsource" min="0" max="200000" step="5000" value="30000" aria-label="税理士・記帳代行への月額支払額（スライダー）" />
+                  <div class="sim-range-labels"><span>0円</span><span>20万円</span></div>
+                  <p class="field-hint">顧問料・記帳代行料など、毎月支払っている金額の合計を入れてください。なければ0円で構いません。</p>
+                </div>
+                <div class="sim-field">
+                  <div class="sim-field-head">
+                    <label for="simPayrollNum">給与計算の対象人数</label>
+                    <span class="sim-value"><input type="number" id="simPayrollNum" min="0" max="50" step="1" value="5" inputmode="numeric" /> 人</span>
+                  </div>
+                  <input type="range" id="simPayroll" min="0" max="50" step="1" value="5" aria-label="給与計算の対象人数（スライダー）" />
+                  <div class="sim-range-labels"><span>0人</span><span>50人</span></div>
+                  <p class="field-hint">給与計算の手作業コストは1人あたり月800円（目安）として換算します。</p>
+                </div>
+                <div class="sim-field">
+                  <div class="sim-field-head"><label>年末調整・決算の外注有無</label></div>
+                  <div class="choice-grid cols-2">
+                    <div class="choice"><input type="radio" name="simYearEnd" id="yearend-yes" value="yes" checked /><label for="yearend-yes">外注している</label></div>
+                    <div class="choice"><input type="radio" name="simYearEnd" id="yearend-no" value="no" /><label for="yearend-no">外注していない（自社対応）</label></div>
+                  </div>
+                  <p class="field-hint">外注している場合は、年末調整・決算の外注費として年150,000円（目安）を加算します。</p>
                 </div>
                 <div class="sim-field no-mb">
                   <div class="sim-field-head">
@@ -728,17 +909,36 @@
                   <p class="sim-big"><span id="simAnnualCost">¥0</span> <small>/ 年</small></p>
                   <p class="sim-sub">月あたり <span id="simMonthlyCost">¥0</span> ／ 年間の作業時間 <span id="simAnnualHours">0</span>時間</p>
                   <dl class="sim-rows">
+                    <div class="sim-row"><dt>内訳：人件費換算（作業時間×時間単価）</dt><dd id="simBreakLabor">—</dd></div>
+                    <div class="sim-row"><dt>内訳：書類の処理・保管コスト</dt><dd id="simBreakDoc">—</dd></div>
+                    <div class="sim-row"><dt>内訳：給与計算の手作業換算</dt><dd id="simBreakPayroll">—</dd></div>
+                    <div class="sim-row"><dt>内訳：税理士・記帳代行への支払い（年額）</dt><dd id="simBreakOutsource">—</dd></div>
+                    <div class="sim-row"><dt>内訳：年末調整・決算の外注費（年額目安）</dt><dd id="simBreakYearEnd">—</dd></div>
                     <div class="sim-row"><dt>クラウド化後の削減見込み（時間）</dt><dd id="simSavedHours">—</dd></div>
                     <div class="sim-row"><dt>クラウド化後の削減見込み（金額）</dt><dd id="simSavedYen">—</dd></div>
                     <div class="sim-row"><dt>削減後の年間コスト（目安）</dt><dd id="simAfterCost">—</dd></div>
                   </dl>
+                  <div class="sim-comment" aria-live="polite">
+                    <h4>あなたの入力に合わせた見立て</h4>
+                    <p id="simComment">入力に応じて、優先して見直すと効果が出やすいポイントをご案内します。</p>
+                  </div>
                   <div class="sim-highlight">
                     <p>補助金を活用できた場合のイメージ<br />導入費用 <span id="simIntroEcho">¥150,000</span> に対して、補助率が最大の場合の実質負担は <strong id="simBurden">¥37,500〜</strong> が目安です。<br /><span class="note">補助率は最大4分の3（制度・年度により変わります）。対象経費や上限額も制度ごとに異なります。</span></p>
                   </div>
                 </div>
+                <div class="sim-premise">
+                  <strong>計算の前提（明示）</strong>
+                  <ul>
+                    <li>時間単価：経営者 ¥3,000/時間、従業員 ¥1,500/時間、外部委託中心 ¥2,000/時間（選択で自動切替、調整可）</li>
+                    <li>書類処理・保管：1枚あたり50円（目安）</li>
+                    <li>給与計算の手作業：1人あたり月800円（目安）</li>
+                    <li>年末調整・決算外注：ありの場合 年150,000円（目安）を加算</li>
+                    <li>削減見込み：入力作業の50〜70%圧縮を目安（保守的に設定）。外注費そのものは削減対象に含めていません</li>
+                  </ul>
+                </div>
                 <div class="disclaimer">
-                  <p>※ 削減率は一般的な目安として30〜50％の幅で表示しています。業務内容によって効果は変わります。</p>
-                  <p>※ シミュレーション結果は目安であり、実際の金額・削減効果を保証するものではありません。補助金には審査があり、交付が決まるものではありません。</p>
+                  <p>※ 結果は上記の前提条件により変わる目安です。実際の金額・削減効果を保証するものではありません。</p>
+                  <p>※ 補助金には審査があり、交付が決まるものではありません。</p>
                   <p>※ 特定ツールの料金はプラン・利用人数により異なります。正確な費用は状況をお聞きしたうえでご案内します。</p>
                 </div>
                 <div class="diag-cta">
@@ -970,12 +1170,24 @@
       <section class="section-top-compact" aria-labelledby="detail-h">
         <div class="wrap">
           <h2 id="detail-h">サービス紹介</h2>
-          <p class="sec-lead">ご相談は無料です。いずれもPSGが相談窓口となり、選定から導入の進め方までご案内します。料金はプランや利用人数、会社の状況によって変わるため、詳しくはお問い合わせください。なお、無料なのはご相談までで、サービスのご利用や導入支援には別途費用がかかります。</p>
+          <p class="sec-lead">ご相談と資料請求は無料です。PSGが窓口となって、3つのサポートパック（経理DXパック／電話代行スタートパック／AI活用サポート）をご案内します。各パックは、無理なく続けられるサポート体制で、梅・竹・松の3プランから選べます。迷ったら標準の「竹」がおすすめです。各パックには「今の困りごと → 導入すると、こう変わります」という導入後のイメージも詳しく載せていますので、導入したあとの働き方の変化を思い描きながらご覧ください。各パックの料金は、ご契約後に発生するものです。相談しただけでは料金はかかりませんので、まずはお気軽にご相談ください。そのほかのサービスや、単発のご紹介枠もあわせて掲載しています。</p>
           <div class="detail-grid">
-            <article class="detail-card">
-              <p class="d-num">SERVICE 01</p>
-              <h3>マネーフォワード クラウド会計</h3>
-              <p>銀行口座やクレジットカードと連携し、明細の取り込みや仕訳の候補づくりを自動化するクラウド会計です。手入力を減らし、売上や資金繰りを早めに把握できる体制づくりを支援します。</p>
+            <article class="detail-card pack-card">
+              <p class="d-num">PACK 01｜経理DXパック</p>
+              <h3>経理DXパック（マネーフォワード クラウド）</h3>
+              <p>中核ツールはマネーフォワード クラウド会計です。銀行口座やクレジットカードと連携し、明細の取り込みや仕訳の候補づくりを自動化します。PSGが導入の伴走と月次の活用チェックを行い、手入力を減らして売上や資金繰りを早めに把握できる体制づくりを支援します。サポートはチャット・メールを中心とした、無理なく続けられる体制でご提供します。</p></p>
+              <div class="future-block">
+                <h4>導入すると、こう変わります</h4>
+                <div class="future-row">
+                  <span class="future-label now">今の困りごと</span>
+                  <p>月末になってから、領収書の束と通帳を見ながらまとめて処理。自社の数字が見えるのは<strong>1〜2ヶ月先</strong>で、「今月は黒字なのか」「来月の支払いに足りるのか」が分からないまま、資金繰りの判断が後手になりがちです。インボイス制度や電子帳簿保存法への対応も、「今のやり方で合っているのか」と不安が残ります。</p>
+                </div>
+                <div class="future-row">
+                  <span class="future-label after">導入後</span>
+                  <p>銀行口座やクレジットカードの明細は<strong>自動で取り込まれ</strong>、領収書は<strong>スマホで撮るだけ</strong>で処理が進みます。月末のまとめ作業が分散され、月次の売上と利益が<strong>翌月の早い段階で見える</strong>ようになります。「来月はいくら入って、いくら出ていくか」という見通しを立てながら経営できるようになり、入金・支払いの段取りも早めに動けます。インボイス・電子帳簿保存法への対応も標準機能でカバーできる範囲が広がり、経理に使っていた時間を本業に回せるようになります。</p>
+                </div>
+                <p class="future-cta">「うちの数字の見え方はどう変わる？」――そんな段階のご相談でも大丈夫です。まずは無料相談で、今の運用と照らしてご案内します。</p>
+              </div>
               <div class="detail-block">
                 <h4>向いている会社</h4>
                 <ul>
@@ -984,21 +1196,200 @@
                   <li>顧問税理士と同じ数字をリアルタイムで見たい会社</li>
                 </ul>
               </div>
+              <div class="plan-compare">
+                <div class="plan-compare-head">
+                  <h4>PSGサポート｜松竹梅 3プラン（税込）</h4>
+                  <span class="plan-initial">初期費用：梅・竹 ¥33,000 <span>／</span> 松 ¥55,000</span>
+                </div>
+                <p class="plan-lead">ご相談・資料請求は無料です。下記はご契約後に発生するPSGのサポート料金です。マネーフォワード クラウドの利用料は、プラン・利用人数に応じて提供元へ別途お支払いいただきます。</p>
+                <div class="plan-grid">
+                  <div class="plan-card">
+                    <p class="plan-name">梅｜ライト</p>
+                    <p class="plan-price">¥5,500<small> /月（税込）</small></p>
+                    <p class="plan-price-note">初期 ¥33,000（税込）</p>
+                    <ul>
+                      <li>導入チェックリストと手順資料で進める伴走</li>
+                      <li>プラン選定・初期設定の確認</li>
+                      <li>使い方Q&amp;A（チャット対応）</li>
+                    </ul>
+                  </div>
+                  <div class="plan-card recommended">
+                    <span class="plan-badge">おすすめ</span>
+                    <p class="plan-name">竹｜スタンダード</p>
+                    <p class="plan-price">¥9,800<small> /月（税込）</small></p>
+                    <p class="plan-price-note">初期 ¥33,000（税込）</p>
+                    <ul>
+                      <li>梅の内容すべて</li>
+                      <li>月次レポートを自動生成（数字へのコメント付き）</li>
+                      <li>数字の異常アラート（連携・未処理の確認）</li>
+                    </ul>
+                  </div>
+                  <div class="plan-card">
+                    <p class="plan-name">松｜プレミアム</p>
+                    <p class="plan-price">¥16,500<small> /月（税込）</small></p>
+                    <p class="plan-price-note">初期 ¥55,000（税込）</p>
+                    <ul>
+                      <li>竹の内容すべて</li>
+                      <li>四半期に1回のオンライン面談</li>
+                      <li>決算前チェック</li>
+                    </ul>
+                  </div>
+                </div>
+                <p class="support-note"><strong>サポート体制について：</strong>一次対応は担当が内容を確認のうえ、チャット・メールでご返信します。月次レポートは自動生成を活用し、数字へのコメントを付けてお届けします。面談は松プランでも四半期に1回までとし、それ以外は非同期で丁寧に対応します。製品自体の不具合や仕様に関するご質問は、提供元のサポートへご案内します。</p>
+              </div>
+            </article>
+
+            <article class="detail-card pack-card">
+              <p class="d-num">PACK 02｜電話代行スタートパック</p>
+              <h3>電話代行スタートパック（fondesk）</h3>
+              <p>中核サービスは電話代行のfondeskです。かかってきた電話に代わりに応答し、内容をメールやチャットで知らせてくれるサービスで、外出中や作業中でも電話を取りこぼしにくくなります。PSGが応答の設計から申込の伴走、運用の見直しまで、チャット・メールを中心とした無理なく続けられる体制でサポートします。</p>
+              <div class="future-block">
+                <h4>導入すると、こう変わります</h4>
+                <div class="future-row">
+                  <span class="future-label now">今の困りごと</span>
+                  <p>作業中・接客中・移動中で電話に出られず、着信に気づいたときにはもう遅く、<strong>新規の問い合わせを取りこぼしてしまう</strong>。やっと出られても、営業電話に時間を取られて目の前の仕事が止まってしまいます。1人や少人数の会社ほど、この「出られない時間」がそのまま機会の損失になりがちです。</p>
+                </div>
+                <div class="future-row">
+                  <span class="future-label after">導入後</span>
+                  <p>電話はプロが一次受けをしてくれるので、<strong>用件だけがメールやチャットで届く</strong>ようになります。内容を見て、大事な電話にだけ折り返せばよくなり、取りこぼしが減ります。営業電話に作業を中断されることも少なくなり、<strong>接客と作業に集中できる時間</strong>が増えます。これまで出られずに逃していた問い合わせが、きちんと対応できる売上の機会に変わっていきます。</p>
+                </div>
+                <p class="future-cta">「うちの電話の出られない時間はどれくらいある？」と気になったら、まずは無料相談で着信の状況をお聞かせください。</p>
+              </div>
               <div class="detail-block">
-                <h4>できること</h4>
+                <h4>向いている会社</h4>
                 <ul>
-                  <li>銀行・カード明細の自動取り込みと仕訳候補の作成</li>
-                  <li>小規模事業者向けプラン（スモールビジネス／ビジネス等）の案内</li>
-                  <li>請求書・経費・給与など周辺サービスとの連携の相談</li>
+                  <li>1人〜小規模で、電話に出られない時間が多い事業者</li>
+                  <li>外出・現場作業・接客中に電話対応が止まってしまう会社</li>
+                  <li>営業電話と大事な問い合わせの振り分けに困っている会社</li>
                 </ul>
               </div>
-              <p class="detail-price">料金について（ご相談は無料）<br /><span>ご相談は無料です。プラン・利用人数により異なります。会社の状況をお聞きしたうえで費用の目安をご案内しますので、詳しくはお問い合わせください。</span></p>
+              <div class="plan-compare">
+                <div class="plan-compare-head">
+                  <h4>PSGサポート｜松竹梅 3プラン（税込）</h4>
+                  <span class="plan-initial">初期費用：梅・竹 ¥22,000 <span>／</span> 松 ¥33,000</span>
+                </div>
+                <p class="plan-lead">ご相談・資料請求は無料です。下記はご契約後に発生するPSGのサポート料金です。</p>
+                <div class="plan-grid">
+                  <div class="plan-card">
+                    <p class="plan-name">梅｜ライト</p>
+                    <p class="plan-price">¥5,500<small> /月（税込）</small></p>
+                    <p class="plan-price-note">初期 ¥22,000（税込）</p>
+                    <ul>
+                      <li>応答フロー（受け答え）の設計</li>
+                      <li>fondesk申込の伴走</li>
+                      <li>通知設定（メール・チャット）</li>
+                    </ul>
+                  </div>
+                  <div class="plan-card recommended">
+                    <span class="plan-badge">おすすめ</span>
+                    <p class="plan-name">竹｜スタンダード</p>
+                    <p class="plan-price">¥9,800<small> /月（税込）</small></p>
+                    <p class="plan-price-note">初期 ¥22,000（税込）</p>
+                    <ul>
+                      <li>梅の内容すべて</li>
+                      <li>月次の着信レポートを自動生成</li>
+                      <li>着信傾向の確認とご案内</li>
+                    </ul>
+                  </div>
+                  <div class="plan-card">
+                    <p class="plan-name">松｜プレミアム</p>
+                    <p class="plan-price">¥16,500<small> /月（税込）</small></p>
+                    <p class="plan-price-note">初期 ¥33,000（税込）</p>
+                    <ul>
+                      <li>竹の内容すべて</li>
+                      <li>応答フローの見直し</li>
+                      <li>四半期に1回のオンライン面談</li>
+                    </ul>
+                  </div>
+                </div>
+                <p class="support-note"><strong>サポート体制について：</strong>応答フローは型をもとに効率よく設計し、設定は遠隔で完了できる形で進めます。月次レポートは自動生成を活用してお届けします。面談は松プランでも四半期に1回までとし、それ以外はチャット・メールで対応します。fondesk自体の不具合や仕様に関するご質問は、提供元のサポートへご案内します。</p>
+              </div>
+              <p class="pack-note">※ fondesk自体の利用料（月額¥12,000〜）は、PSGの料金とは別料金です。提供会社へ直接お支払いいただきます。プラン内容は提供元の定めによります。</p>
+            </article>
+
+            <article class="detail-card pack-card">
+              <p class="d-num">PACK 03｜AI活用サポート</p>
+              <h3>AI活用サポート（Genspark Plus）</h3>
+              <p>中核ツールはAIワークスペースのGenspark Plusです。調べもの、資料づくり、文章作成などの日常業務にAIを取り入れられるよう、PSGがツールの選定・初期設定から使い方のレクチャー、月次の活用チェックまで、資料・動画とチャットを中心とした無理なく続けられる体制で伴走します。</p>
+              <div class="future-block">
+                <h4>導入すると、こう変わります</h4>
+                <div class="future-row">
+                  <span class="future-label now">今の困りごと</span>
+                  <p>「AIが便利らしい」と聞くものの、<strong>何から始めればいいか分からない</strong>まま時間だけが過ぎていく。提案書の下調べ、資料づくり、文章の作成はすべて自分で抱え込み、1件の資料に半日かかることもあります。少人数の会社では、その時間がそのまま他の仕事を圧迫してしまいます。</p>
+                </div>
+                <div class="future-row">
+                  <span class="future-label after">導入後</span>
+                  <p>資料の下書き、リサーチ、議事録の整理、文章作成を<strong>AIが下支え</strong>するようになり、白紙から始める作業が減って、かかる時間が短くなります。PSGの月次チェックで使い方を少しずつ改善していくので、「入れただけ」で終わらず、業務に合った使い方が定着していきます。1人でも<strong>「もう1人分の手」が持てる感覚</strong>で動けるようになり、小さな会社でも判断と対応のスピードが上がります。</p>
+                </div>
+                <p class="future-cta">「AIで何ができるのか、うちの業務で見てみたい」――そんなご相談も無料です。実際の業務に沿った使い方をご案内します。</p>
+              </div>
+              <div class="detail-block">
+                <h4>向いている会社</h4>
+                <ul>
+                  <li>AIツールに興味はあるが、何から始めればいいか分からない会社</li>
+                  <li>導入したものの、使い方が一部の業務に留まっている会社</li>
+                  <li>少人数で、調べものや資料作成の時間を減らしたい会社</li>
+                </ul>
+              </div>
+              <div class="plan-compare">
+                <div class="plan-compare-head">
+                  <h4>PSGサポート｜松竹梅 3プラン（税込）</h4>
+                  <span class="plan-initial">初期費用：なし（全プラン共通）</span>
+                </div>
+                <p class="plan-lead">ご相談・資料請求は無料です。下記はご契約後に発生するPSGのサポート料金です。ツール自体の利用条件は提供元の定めによります。</p>
+                <div class="plan-grid">
+                  <div class="plan-card">
+                    <p class="plan-name">梅｜ライト</p>
+                    <p class="plan-price">¥5,500<small> /月（税込）</small></p>
+                    <p class="plan-price-note">初期費用なし</p>
+                    <ul>
+                      <li>初期設定のサポート</li>
+                      <li>使い方レクチャー（資料・動画の配信）</li>
+                      <li>使い方Q&amp;A（チャット対応）</li>
+                    </ul>
+                  </div>
+                  <div class="plan-card recommended">
+                    <span class="plan-badge">おすすめ</span>
+                    <p class="plan-name">竹｜スタンダード</p>
+                    <p class="plan-price">¥9,800<small> /月（税込）</small></p>
+                    <p class="plan-price-note">初期費用なし</p>
+                    <ul>
+                      <li>梅の内容すべて</li>
+                      <li>月次の活用レポートを自動生成</li>
+                      <li>新機能のご案内</li>
+                    </ul>
+                  </div>
+                  <div class="plan-card">
+                    <p class="plan-name">松｜プレミアム</p>
+                    <p class="plan-price">¥16,500<small> /月（税込）</small></p>
+                    <p class="plan-price-note">初期費用なし</p>
+                    <ul>
+                      <li>竹の内容すべて</li>
+                      <li>業務別の型づくり（提案書・議事録など）</li>
+                      <li>四半期に1回のオンライン面談</li>
+                    </ul>
+                  </div>
+                </div>
+                <p class="support-note"><strong>サポート体制について：</strong>レクチャーは資料と動画を中心にご案内し、ご質問はチャットで担当が確認のうえご返信します。月次レポートは自動生成を活用してお届けします。面談は松プランでも四半期に1回までとし、それ以外は非同期で対応します。ツール自体の不具合や仕様に関するご質問は、提供元のサポートへご案内します。</p>
+              </div>
             </article>
 
             <article class="detail-card">
-              <p class="d-num">SERVICE 02</p>
+              <p class="d-num">SERVICE 04</p>
               <h3>請求書・経費精算などの経理DXツール</h3>
               <p>請求書の発行・受取や領収書の処理をクラウド化し、会計とつなげることで二重入力や転記ミスを減らします。インボイス制度・電子帳簿保存法への対応もあわせて整えます。</p>
+              <div class="future-block">
+                <h4>導入すると、こう変わります</h4>
+                <div class="future-row">
+                  <span class="future-label now">今の困りごと</span>
+                  <p>請求書を作って、印刷して、封をして送る。届いた請求書はファイルに綴じて、経理のときにまた入力する。<strong>同じ数字を何度も手で移す</strong>作業に毎月時間がかかり、転記ミスや探し物の手間もついて回ります。</p>
+                </div>
+                <div class="future-row">
+                  <span class="future-label after">導入後</span>
+                  <p>請求書の作成・送付・入金確認と、受け取った請求書の取り込みがオンラインでつながり、<strong>会計への二重入力が減ります</strong>。領収書はスマホで撮って送るだけになり、経費精算の申請・承認も場所を選ばず回せるようになります。書類を探す時間や、月末に慌ててまとめる負担が軽くなります。</p>
+                </div>
+                <p class="future-cta">扱う書類の枚数によって進め方は変わります。まずは無料相談で、今の枚数と流れをお聞かせください。</p>
+              </div>
               <div class="detail-block">
                 <h4>向いている会社</h4>
                 <ul>
@@ -1019,9 +1410,21 @@
             </article>
 
             <article class="detail-card">
-              <p class="d-num">SERVICE 03</p>
+              <p class="d-num">SERVICE 05</p>
               <h3>経理まわりのBPO・代行サービスの紹介</h3>
               <p>経理担当の不在や業務の属人化にお困りの会社へ、経理代行やBPOサービスをご紹介します。ツール導入とあわせて「人がやる部分」を外に出す選択肢も検討できます。</p>
+              <div class="future-block">
+                <h4>導入すると、こう変わります</h4>
+                <div class="future-row">
+                  <span class="future-label now">今の困りごと</span>
+                  <p>経理は社長か特定のスタッフしか分からず、その人が休むと仕事が止まる。月末と決算期だけ作業が集中し、<strong>本業の時間が経理に取られてしまう</strong>状態が続いています。</p>
+                </div>
+                <div class="future-row">
+                  <span class="future-label after">導入後</span>
+                  <p>記帳や経費処理など任せられる部分を外に出すことで、<strong>特定の人に頼りきりの状態が和らぎます</strong>。月末の集中も分散しやすくなり、社長やスタッフは本来の仕事やお客様対応に時間を使えるようになります。クラウド会計と組み合わせれば、任せた先とも同じ数字を見ながら進められます。</p>
+                </div>
+                <p class="future-cta">「どこまで任せられるのか」から一緒に切り分けます。まずは無料相談でお聞かせください。</p>
+              </div>
               <div class="detail-block">
                 <h4>向いている会社</h4>
                 <ul>
@@ -1042,9 +1445,21 @@
             </article>
 
             <article class="detail-card">
-              <p class="d-num">SERVICE 04</p>
+              <p class="d-num">SERVICE 06</p>
               <h3>補助金を活用した導入の相談</h3>
               <p>デジタル化・AI導入補助金など、クラウドツールの導入に使える制度の活用についてご相談に対応します。対象になりそうな制度の確認から、申請に向けた準備の進め方までご案内します。</p>
+              <div class="future-block">
+                <h4>活用できると、こう変わります</h4>
+                <div class="future-row">
+                  <span class="future-label now">今の困りごと</span>
+                  <p>「導入したいけれど、初期費用が気になって踏み出せない」「制度があるらしいが、どれが使えるのか分からない」という状態で、検討が止まってしまいがちです。</p>
+                </div>
+                <div class="future-row">
+                  <span class="future-label after">活用後</span>
+                  <p>対象になる制度とスケジュールが見えることで、<strong>導入のタイミングと予算の見通しが立てやすく</strong>なります。活用できた場合は初期負担を抑えながらクラウド化を進められるため、「費用が理由で先送り」が解消され、本来やりたかった業務の見直しに早く着手できるようになります。</p>
+                </div>
+                <p class="future-cta">制度は時期によって変わります。まずは無料相談で、対象になりそうかどうかを確認しましょう。</p>
+              </div>
               <div class="detail-block">
                 <h4>向いている会社</h4>
                 <ul>
@@ -1064,8 +1479,37 @@
               <p class="detail-price">ご相談について<br /><span>ご相談は無料です。補助金には審査があり、申請すれば必ず交付されるものではありません。詳しくはお問い合わせください。</span></p>
             </article>
           </div>
+
+          <div class="referral-head">
+            <h3>単発のご紹介枠</h3>
+            <p>下記の2つは、PSGのパックではなくご紹介のみの枠です。制度やサービスの詳しい内容は提供元がご案内します。PSGは相談窓口として、概要の説明とお取り次ぎを行います。ご相談は無料です。</p>
+          </div>
+          <div class="referral-grid">
+            <article class="referral-card">
+              <p class="r-tag">ご紹介のみ</p>
+              <h4>SBI企業型確定拠出年金</h4>
+              <p>会社の福利厚生として導入できる企業型の確定拠出年金です。1名の会社や役員のみの会社、個人事業主でも検討できる場合があります。制度の設計や導入手続きは提供元が対応しますので、ご興味があればPSGからお取り次ぎします。</p>
+              <div class="referral-future">
+                <span class="rf-label">導入すると、こう変わります</span>
+                <p>役員と従業員の退職金を、毎月少しずつ積み立てていく仕組みが会社にできます。掛金は全額経費として扱えるため、将来に備えながら会社の数字も整えやすくなります。「将来の安心づくりを会社として用意している」という姿勢は、採用の場面でも会社の魅力として伝わりやすくなります。目先の業務改善ではなく、数年先を見た会社の土台づくりにつながる選択肢です。</p>
+                <p class="rf-cta">対象になるかどうかは会社の形態によって変わります。気になったら、まずは無料相談で概要だけでもお聞きください。PSGから提供元へお取り次ぎします。</p>
+              </div>
+            </article>
+            <article class="referral-card">
+              <p class="r-tag">ご紹介のみ</p>
+              <h4>MELOS（スクール・ジム向け予約システム）</h4>
+              <p>スクールやジムなど、レッスン・予約制の事業者向けの予約・会員管理システムです。予約の受付や会員管理をオンライン化したい事業者向けに、PSGから提供元へお取り次ぎします。導入や運用のサポートは提供元が対応します。</p>
+              <div class="referral-future">
+                <span class="rf-label">導入すると、こう変わります</span>
+                <p>予約の受付と会員管理がシステム化され、電話で予約を受ける対応や、紙や表での管理が減ります。二重予約の心配も少なくなり、空き状況や会員の情報がその場で確認できるようになります。受付まわりの手間が減ることで、スクールやジムの運営が少ない人数でも回しやすくなり、レッスンや接客そのものに集中できる時間が増えます。</p>
+                <p class="rf-cta">「今の予約の受け方で手一杯」という事業者様は、まずは無料相談で現状をお聞かせください。PSGから提供元へお取り次ぎします。</p>
+              </div>
+            </article>
+          </div>
+
           <div class="notes">
             <p>※ 各ツールの料金・プラン内容は提供元の定めによります。費用の目安は、会社の状況をお聞きしたうえでご案内します。</p>
+            <p>※ パック料金はPSGのサポート料金です。各ツール・サービスの利用料は、記載のあるものを除き、提供元へ別途お支払いいただく場合があります。</p>
             <p>※ 補助金には審査があり、交付を保証するものではありません。対象要件や公募スケジュールは制度ごとに異なりますので、最新の内容を確認しながらご案内します。</p>
             <p>※ 税務申告そのものや税務相談は税理士の業務となります。PSGはツールの選定・導入の相談窓口として対応します。</p>
           </div>
@@ -1218,103 +1662,116 @@
           research: "情報収集中の段階ですね。まずは小さく試して、効果が見えた範囲から広げる進め方がおすすめです。"
         };
 
-        function buildRecs(size, method, concerns) {
-          var recs = [];
+        var structureLabels = { self: "経営者が自分で処理", family: "家族・パートタイマーが処理", staff: "経理担当者がいる", outsourced: "税理士・会計事務所に委託" };
+        var softwareLabels = { none: "会計ソフト未使用（手書き・Excel）", mf: "マネーフォワード クラウド使用中", freee: "freee使用中", yayoi: "弥生使用中", other: "その他ソフト使用中" };
+        var docLabels = { low: "月〜30枚", mid: "月31〜100枚", high: "月101〜300枚", vhigh: "月301枚以上" };
+        var docNums = { low: 30, mid: 65, high: 200, vhigh: 350 };
+        var lawLabels = { done: "インボイス・電帳法対応済み", partial: "一部対応", notyet: "未対応", unknown: "対応内容が不明" };
+        var otherLabels = { phone: "電話の取りこぼし", shortage: "人手不足", sales: "集客・営業の時間不足", aidoc: "資料作成・調べものの負担" };
+        var subsidyLabels = { want: "補助金を積極活用したい", consider: "使えるなら検討したい", no: "補助金にこだわらない" };
+
+        function buildRecs(data) {
+          var size = data.size, method = data.method, concerns = data.concerns;
+          var structure = data.structure, software = data.software, docVolume = data.docVolume, lawStatus = data.lawStatus, otherConcerns = data.otherConcerns, subsidyInterest = data.subsidyInterest;
           var has = function (v) { return concerns.indexOf(v) !== -1; };
+          var hasOther = function (v) { return otherConcerns.indexOf(v) !== -1; };
+          var scores = { dx: 0, phone: 0, ai: 0, subsidy: 0 };
+          // --- Scoring ---
+          // structure
+          if (structure === "self") { scores.dx += 3; scores.ai += 2; scores.phone += 1; }
+          if (structure === "family") { scores.dx += 2; scores.ai += 1; }
+          if (structure === "staff") { scores.dx += 1; scores.ai += 1; }
+          if (structure === "outsourced") { scores.dx += 2; }
+          // software / method
+          if (software === "none") scores.dx += 4;
+          if (software === "freee" || software === "yayoi" || software === "other") scores.dx += 2;
+          if (software === "mf") scores.dx += 1;
+          if (method === "paper" || method === "excel") scores.dx += 3;
+          if (method === "install") scores.dx += 2;
+          // doc volume
+          if (docVolume === "low") scores.dx += 1;
+          if (docVolume === "mid") scores.dx += 3;
+          if (docVolume === "high") scores.dx += 5;
+          if (docVolume === "vhigh") scores.dx += 6;
+          // law
+          if (lawStatus === "notyet") { scores.dx += 4; scores.subsidy += 1; }
+          if (lawStatus === "partial") scores.dx += 3;
+          if (lawStatus === "unknown") scores.dx += 3;
+          // concerns
+          if (has("invoice")) scores.dx += 3;
+          if (has("receipt")) scores.dx += 3;
+          if (has("law")) scores.dx += 3;
+          if (has("tax")) scores.dx += 2;
+          if (has("subsidy")) scores.subsidy += 5;
+          // other concerns
+          if (hasOther("phone")) scores.phone += 6;
+          if (hasOther("shortage")) { scores.phone += 3; scores.ai += 3; scores.dx += 2; }
+          if (hasOther("sales")) scores.ai += 3;
+          if (hasOther("aidoc")) scores.ai += 5;
+          // subsidy interest
+          if (subsidyInterest === "want") scores.subsidy += 6;
+          if (subsidyInterest === "consider") scores.subsidy += 3;
+          // size boost for dx scale
+          if (size === "mid" || size === "large") scores.dx += 1;
+          if (size === "solo" || size === "small") scores.phone += 1;
 
-          // 1) Core accounting recommendation
-          if (method === "cloud") {
-            recs.push({
-              kicker: "おすすめ 01｜今の使い方の見直し",
-              title: "クラウド会計の活用度アップ＋周辺ツールの追加",
-              body: "すでにクラウド会計をお使いなら、乗り換えより「連携の自動化」と周辺業務のクラウド化が効果的です。銀行・カード連携、自動仕訳ルール、請求書・経費との連携を見直します。",
-              step: "進め方：現在の利用状況をヒアリング → 未活用の連携を洗い出し"
-            });
-          } else if (size === "solo" || size === "small") {
-            recs.push({
-              kicker: "おすすめ 01｜まずはこちら",
-              title: "マネーフォワード クラウド会計（小規模向け）",
-              body: "個人事業主〜小規模法人に合わせやすい構成です。銀行口座・クレジットカードと連携して明細を自動で取り込み、手入力を減らすところから始めます。",
-              step: "進め方：無料相談 → 口座・カード連携 → 日々の入力を自動化"
-            });
-          } else if (size === "mid") {
-            recs.push({
-              kicker: "おすすめ 01｜まずはこちら",
-              title: "マネーフォワード クラウド会計（法人向け）",
-              body: "従業員11〜50名規模では、複数人での入力や承認、部門別の把握が重要になります。会計を中心に、請求書・経費・給与まわりまで一体で整える構成が合います。",
-              step: "進め方：業務フローの確認 → 権限・承認ルールの設計 → 段階導入"
-            });
-          } else {
-            recs.push({
-              kicker: "おすすめ 01｜まずはこちら",
-              title: "マネーフォワード クラウド会計Plus等の上位構成の検討",
-              body: "51名以上では、承認フローや内部統制、部門・拠点別の集計が求められます。現行ソフトからの移行計画を含め、無理のない切り替え手順をご案内します。",
-              step: "進め方：要件の整理 → 移行計画づくり → 並行運用で切り替え"
-            });
-          }
+          var docNum = docNums[docVolume] || 65;
+          var savedHoursMonth = docVolume === "vhigh" ? "8〜12" : docVolume === "high" ? "5〜8" : docVolume === "mid" ? "2〜4" : "1〜2";
 
-          // 2) Concern-driven recommendation (pick strongest)
-          if (has("invoice")) {
-            recs.push({
-              kicker: "おすすめ 02｜お悩みに直結",
-              title: "請求書の発行・受取のクラウド化",
-              body: "請求書の作成・送付・入金確認と、受け取った請求書の取り込みをクラウド化します。会計とつなげることで、二重入力や転記ミスを減らせます。",
-              step: "進め方：発行・受取の件数を確認 → テンプレート整備 → 会計と連携"
-            });
-          } else if (has("receipt")) {
-            recs.push({
-              kicker: "おすすめ 02｜お悩みに直結",
-              title: "領収書・経費精算のクラウド化",
-              body: "スマホで領収書を撮影して取り込む運用に変えると、月末のまとめ処理が分散します。経費精算の申請・承認もオンラインで完結できる形をご案内します。",
-              step: "進め方：精算ルールの確認 → 撮影・申請の運用づくり → 会計と連携"
-            });
-          } else if (has("law")) {
-            recs.push({
-              kicker: "おすすめ 02｜お悩みに直結",
-              title: "インボイス・電子帳簿保存法への対応チェック",
-              body: "今の保存方法や請求書の記載が制度に合っているかを一緒に確認します。不足があれば、クラウドでの電子保存に切り替える手順をご案内します。",
-              step: "進め方：現状チェック → 不足分の洗い出し → 電子保存へ移行"
-            });
-          } else if (has("tax")) {
-            recs.push({
-              kicker: "おすすめ 02｜お悩みに直結",
-              title: "税理士とリアルタイムで共有できる運用へ",
-              body: "クラウド会計なら、資料の受け渡しを待たずに税理士と同じ数字を同時に見られます。月次資料の作成や質問のやり取りがスムーズになります。",
-              step: "進め方：顧問税理士との共有方法を確認 → 閲覧権限の設定"
-            });
-          } else {
-            recs.push({
-              kicker: "おすすめ 02｜あわせて検討",
-              title: "請求書・経費精算まで含めた経理DX",
-              body: "会計だけでなく、請求書の発行や経費精算もクラウド化すると、経理全体の手間が大きく減ります。今いちばん時間がかかっている業務から順に広げるのがコツです。",
-              step: "進め方：手間が大きい業務を特定 → 優先順位をつけて導入"
-            });
-          }
+          var candidates = [];
+          // DX
+          (function(){
+            var reasons = [];
+            if (docVolume === "high" || docVolume === "vhigh") {
+              if (structure === "self") reasons.push("領収書・請求書が" + docLabels[docVolume] + "（約" + docNum + "枚）あり、ご自身で処理されているため、自動取込と自動仕訳で月" + savedHoursMonth + "時間ほど圧縮できる見込みです（入力作業の50〜70%圧縮を目安とした場合）。");
+              else reasons.push("領収書・請求書が" + docLabels[docVolume] + "（約" + docNum + "枚）と多いため、自動取込の効果が出やすいボリュームです。月" + savedHoursMonth + "時間ほどの圧縮が見込めます。");
+            } else if (docVolume === "mid") {
+              reasons.push("書類が" + docLabels[docVolume] + "あるため、手入力を自動取込に置き換えるだけでも月" + savedHoursMonth + "時間ほどの余裕が生まれやすくなります。");
+            }
+            if (software === "none") reasons.push("会計ソフトを使っておらず手書き・Excel中心のため、クラウド会計への移行で明細連携の効果が最も出やすい状態です。");
+            if (software === "freee" || software === "yayoi") reasons.push(softwareLabels[software] + "のため、乗り換え・連携の見直しで二重入力を減らせる余地があります。");
+            if (lawStatus === "notyet" || lawStatus === "unknown") reasons.push("インボイス・電子帳簿保存法が" + (lawStatus === "notyet" ? "まだ対応できていない" : "何が必要か分からない") + "状態のため、経理DXと同時に電子保存のルールを整えると後戻りが少なくなります。");
+            if (lawStatus === "partial") reasons.push("制度対応が一部にとどまっているため、不足分（電子保存など）をDXパックでまとめて整えるのが効率的です。");
+            if (has("invoice") || has("receipt")) reasons.push("「請求書・領収書の手間」を選ばれているため、会計と請求書・経費を連携させる構成を優先しています。");
+            if (!reasons.length) reasons.push("現在のやり方（" + (methodLabels[method]||"") + "）と規模（" + (sizeLabels[size]||"") + "）から、まず会計まわりの自動化が全体の負担軽減につながりやすいと判断しました。");
+            candidates.push({ key:"dx", score: scores.dx, title: size === "large" ? "経理DXパック（上位構成の検討を含む）" : "経理DXパック（マネーフォワード クラウド）", body: "銀行・カード連携、領収書の自動取込、請求書・経費との連携で手入力を減らし、数字を早めに把握できる体制を作ります。制度対応もあわせて整えます。", reason: reasons.slice(0,2).join(" "), step: "進め方：無料相談 → 現在の体制・ソフトを確認 → 連携・移行計画 → 段階導入" });
+          })();
+          // Phone
+          (function(){
+            var reasons = [];
+            if (hasOther("phone")) reasons.push("「電話に出られず問い合わせを取りこぼす」を選ばれているため、優先度を最も高くしています。一次受けを外部化すると、用件だけが通知され、大事な電話にだけ折り返せます。");
+            if (hasOther("shortage")) reasons.push("人手不足も選ばれているため、電話対応を切り離すことで少人数でも接客・作業に集中しやすくなります。");
+            if (structure === "self") reasons.push("経理も経営者ご自身が担っている状態で、電話対応まで重なると本業の時間が分断されやすいため、あわせてご提案しています。");
+            if (!reasons.length) reasons.push("規模が" + (sizeLabels[size]||"") + "で少人数体制のため、電話の取りこぼし対策を入れておくと機会損失を防ぎやすくなります。");
+            candidates.push({ key:"phone", score: scores.phone, title: "電話代行スタートパック（fondesk）", body: "電話の一次受けをプロに任せ、内容はメールやチャットで受け取る形にします。営業電話に中断されず、必要な折り返しに集中できます。", reason: reasons.slice(0,2).join(" "), step: "進め方：着信状況の確認 → 応答フローの設計 → 申込・通知設定" });
+          })();
+          // AI
+          (function(){
+            var reasons = [];
+            if (hasOther("aidoc")) reasons.push("「資料作成・調べものに時間がかかる」を選ばれているため、AIの下書き・リサーチ支援が直接効きやすい状態です。");
+            if (hasOther("shortage")) reasons.push("人手不足を選ばれているため、定型的な文章作成や下調べをAIが下支えすることで、もう1人分の手を補うイメージで活用できます。");
+            if (hasOther("sales")) reasons.push("集客・営業に時間が割けない悩みがあるため、提案資料や文章作成をAIで短縮し、営業に回す時間を作る狙いです。");
+            if (structure === "self") reasons.push("経営者ご自身が経理まで担っているため、経理以外の調べもの・資料作成もAIで圧縮すると全体の負担が下がります。");
+            if (!reasons.length) reasons.push("少人数で回している業務ほど、資料の下書きやリサーチをAIに任せる効果が出やすくなります。");
+            candidates.push({ key:"ai", score: scores.ai, title: "AI活用サポート（Genspark Plus）", body: "調べもの、資料の下書き、文章作成にAIを取り入れ、PSGが初期設定と月次の活用チェックで定着を支援します。", reason: reasons.slice(0,2).join(" "), step: "進め方：業務の棚卸し → ツール選定・初期設定 → 使い方レクチャー" });
+          })();
+          // Subsidy
+          (function(){
+            var reasons = [];
+            if (subsidyInterest === "want") reasons.push("補助金を「積極的に活用したい」と回答されているため、対象制度と公募スケジュールを先に確認する優先度が高いです。");
+            if (has("subsidy")) reasons.push("困りごとに「補助金を使って導入したい」が含まれているため、導入計画と申請スケジュールをセットで組むご提案です。");
+            if (subsidyInterest === "consider") reasons.push("「使えるなら検討したい」という回答のため、使える制度があるかを無料相談で先に判定します。対象外なら無理に申請はおすすめしません。");
+            if (lawStatus === "notyet") reasons.push("制度対応が未対応の状態では、対応のための導入費用が補助対象になる場合があるため、あわせて確認する価値があります。");
+            if (!reasons.length) reasons.push("導入時期と制度のスケジュールが合えば、初期負担を抑えられる可能性があるため候補に入れています。");
+            candidates.push({ key:"subsidy", score: scores.subsidy, title: "補助金活用の相談（デジタル化・AI導入補助金など）", body: "対象になりそうな制度の確認から、スケジュールを逆算した導入計画までご案内します。審査があるため交付を保証するものではありません。", reason: reasons.slice(0,2).join(" "), step: "進め方：対象判定 → スケジュール逆算 → ツール選定と申請準備" });
+          })();
 
-          // 3) Subsidy or law / next step
-          if (has("subsidy")) {
-            recs.push({
-              kicker: "おすすめ 03｜コストを抑える",
-              title: "補助金活用の相談（デジタル化・AI導入補助金など）",
-              body: "導入コストに使える制度があるかを、対象要件とスケジュールを確認しながらご案内します。制度ごとに申請時期が決まっているため、早めの確認が大切です。",
-              step: "進め方：対象になるか確認 → スケジュール逆算 → 申請準備"
-            });
-          } else if (!has("law")) {
-            recs.push({
-              kicker: "おすすめ 03｜制度対応も一緒に",
-              title: "インボイス・電子帳簿保存法への対応",
-              body: "クラウド化と同時に、領収書・請求書の電子保存など制度対応も整えておくと後が楽です。今の運用で不足している部分からご案内します。",
-              step: "進め方：保存方法の確認 → 電子保存ルールの整備"
-            });
-          } else {
-            recs.push({
-              kicker: "おすすめ 03｜次の一手",
-              title: "数字をリアルタイムで見られる体制づくり",
-              body: "入力の手間が減ると、売上や資金繰りを早めに把握できるようになります。月末を待たずに数字を確認できる運用を目指します。",
-              step: "進め方：見たい数字を決める → 集計の自動化"
-            });
-          }
-          return recs.slice(0, 3);
+          candidates.sort(function(a,b){ if (b.score !== a.score) return b.score - a.score; var order={dx:0,phone:1,ai:2,subsidy:3}; return order[a.key]-order[b.key]; });
+          var top = candidates.filter(function(c){ return c.score > 0; }).slice(0,3);
+          if (!top.length) top = candidates.slice(0,3);
+          return top.map(function(c, idx){
+            return { kicker: "おすすめ " + String(idx+1).padStart(2,"0") + "｜優先度 " + (idx+1) + "位", score: c.score, title: c.title, body: c.body, reason: c.reason, step: c.step };
+          });
         }
 
         var suppressScroll = false;
@@ -1324,18 +1781,27 @@
             var size = (form.querySelector('input[name="size"]:checked') || {}).value || "solo";
             var method = (form.querySelector('input[name="method"]:checked') || {}).value || "paper";
             var timing = (form.querySelector('input[name="timing"]:checked') || {}).value || "soon";
+            var structure = (form.querySelector('input[name="structure"]:checked') || {}).value || "self";
+            var software = (form.querySelector('input[name="software"]:checked') || {}).value || "none";
+            var docVolume = (form.querySelector('input[name="docVolume"]:checked') || {}).value || "mid";
+            var lawStatus = (form.querySelector('input[name="lawStatus"]:checked') || {}).value || "partial";
+            var subsidyInterest = (form.querySelector('input[name="subsidyInterest"]:checked') || {}).value || "consider";
             var concerns = Array.prototype.map.call(form.querySelectorAll('input[name="concern"]:checked'), function (el) { return el.value; });
-            var recs = buildRecs(size, method, concerns);
-            summaryEl.textContent = "あなたの状況：" + sizeLabels[size] + " ／ " + methodLabels[method] + "。" + timingText[timing] + " 下の3つがおすすめの進め方です。";
+            var otherConcerns = Array.prototype.map.call(form.querySelectorAll('input[name="otherConcern"]:checked'), function (el) { return el.value; });
+            var recs = buildRecs({ size: size, method: method, concerns: concerns, structure: structure, software: software, docVolume: docVolume, lawStatus: lawStatus, otherConcerns: otherConcerns, subsidyInterest: subsidyInterest });
+            var otherText = otherConcerns.length ? " ／ 経理以外：" + otherConcerns.map(function(v){ return otherLabels[v]||v; }).join("・") : "";
+            summaryEl.textContent = "あなたの状況：" + sizeLabels[size] + " ／ " + structureLabels[structure] + " ／ " + softwareLabels[software] + " ／ " + docLabels[docVolume] + " ／ " + lawLabels[lawStatus] + otherText + " ／ " + subsidyLabels[subsidyInterest] + "。" + timingText[timing] + " 回答をスコアリングし、優先順位の高い順に最大3件をご提案します。";
             gridEl.innerHTML = "";
             recs.forEach(function (r) {
               var card = document.createElement("article");
               card.className = "rec-card";
-              var k = document.createElement("p"); k.className = "rec-kicker"; k.textContent = r.kicker;
+              var k = document.createElement("p"); k.className = "rec-kicker"; k.textContent = r.kicker + (r.score ? "（スコア " + r.score + "）" : "");
               var h = document.createElement("h3"); h.textContent = r.title;
               var p = document.createElement("p"); p.textContent = r.body;
+              card.appendChild(k); card.appendChild(h); card.appendChild(p);
+              if (r.reason) { var rp = document.createElement("p"); rp.className = "rec-reason"; rp.innerHTML = ""; var strong = document.createElement("strong"); strong.textContent = "おすすめする理由："; rp.appendChild(strong); rp.appendChild(document.createTextNode(r.reason)); card.appendChild(rp); }
               var s = document.createElement("p"); s.className = "rec-step"; s.textContent = r.step;
-              card.appendChild(k); card.appendChild(h); card.appendChild(p); card.appendChild(s);
+              card.appendChild(s);
               gridEl.appendChild(card);
             });
             if (resultBox) { resultBox.hidden = false; }
@@ -1360,6 +1826,11 @@
             document.getElementById("size-solo").checked = true;
             document.getElementById("method-paper").checked = true;
             document.getElementById("timing-soon").checked = true;
+            var st = document.getElementById("structure-self"); if (st) st.checked = true;
+            var sw = document.getElementById("software-none"); if (sw) sw.checked = true;
+            var dv = document.getElementById("doc-mid"); if (dv) dv.checked = true;
+            var lw = document.getElementById("law-partial"); if (lw) lw.checked = true;
+            var sb = document.getElementById("subsidy-consider"); if (sb) sb.checked = true;
             if (resultBox) { resultBox.hidden = true; }
             hasShownResult = false;
           });
@@ -1390,29 +1861,71 @@
           return function () { var v = parseFloat(num.value); return isNaN(v) ? parseFloat(range.value) || 0 : v; };
         }
 
-        var getHours, getWage, getDocs, getIntro;
+        var getHours, getWage, getDocs, getIntro, getOutsource, getPayroll;
+        function getHandler() { var el = document.querySelector('input[name="simHandler"]:checked'); return el ? el.value : "owner"; }
+        function getYearEnd() { var el = document.querySelector('input[name="simYearEnd"]:checked'); return el ? el.value : "yes"; }
+        var WAGE_MAP = { owner: 3000, employee: 1500, outsourced: 2000 };
+        var WAGE_LABEL = { owner: "経営者 ¥3,000/時間", employee: "従業員 ¥1,500/時間", outsourced: "外部委託中心 ¥2,000/時間" };
         function calc() {
           var hours = getHours(), wage = getWage(), docs = getDocs(), intro = getIntro();
+          var outsourceMonthly = getOutsource ? getOutsource() : 0;
+          var payrollCount = getPayroll ? getPayroll() : 0;
+          var yearEndAnnual = getYearEnd() === "yes" ? 150000 : 0;
           var monthlyLabor = hours * wage;
           var monthlyDoc = docs * 50;
-          var monthly = monthlyLabor + monthlyDoc;
+          var monthlyPayroll = payrollCount * 800;
+          var monthly = monthlyLabor + monthlyDoc + monthlyPayroll + outsourceMonthly + (yearEndAnnual/12);
           var annual = monthly * 12;
           var annualHours = hours * 12;
-          var savedHoursLow = annualHours * 0.3, savedHoursHigh = annualHours * 0.5;
-          var savedYenLow = annual * 0.3, savedYenHigh = annual * 0.5;
+          var compressibleMonthly = monthlyLabor + monthlyDoc + monthlyPayroll;
+          var savedYenLow = compressibleMonthly * 12 * 0.5, savedYenHigh = compressibleMonthly * 12 * 0.7;
+          var savedHoursLow = annualHours * 0.5, savedHoursHigh = annualHours * 0.7;
           document.getElementById("simAnnualCost").textContent = yen(annual);
           document.getElementById("simMonthlyCost").textContent = yen(monthly);
           document.getElementById("simAnnualHours").textContent = Math.round(annualHours).toLocaleString("ja-JP");
+          var bl = document.getElementById("simBreakLabor"); if (bl) bl.textContent = yen(monthlyLabor*12) + " / 年（月 " + yen(monthlyLabor) + "）";
+          var bd = document.getElementById("simBreakDoc"); if (bd) bd.textContent = yen(monthlyDoc*12) + " / 年（月 " + yen(monthlyDoc) + "）";
+          var bp = document.getElementById("simBreakPayroll"); if (bp) bp.textContent = yen(monthlyPayroll*12) + " / 年（月 " + yen(monthlyPayroll) + "）";
+          var bo = document.getElementById("simBreakOutsource"); if (bo) bo.textContent = yen(outsourceMonthly*12) + " / 年（月 " + yen(outsourceMonthly) + "）";
+          var by = document.getElementById("simBreakYearEnd"); if (by) by.textContent = yen(yearEndAnnual) + " / 年";
           document.getElementById("simSavedHours").textContent = "年間 " + Math.round(savedHoursLow).toLocaleString("ja-JP") + "〜" + Math.round(savedHoursHigh).toLocaleString("ja-JP") + "時間";
           document.getElementById("simSavedYen").textContent = yen(savedYenLow) + "〜" + yen(savedYenHigh) + " / 年";
           document.getElementById("simAfterCost").textContent = yen(annual - savedYenHigh) + "〜" + yen(annual - savedYenLow) + " / 年";
           document.getElementById("simIntroEcho").textContent = yen(intro);
           document.getElementById("simBurden").textContent = yen(intro * 0.25) + "〜";
+          // Dynamic comment
+          var commentEl = document.getElementById("simComment");
+          if (commentEl) {
+            var comments = [];
+            if (docs >= 200) comments.push("書類が月" + docs + "枚と多いため、銀行・カード連携と領収書の自動取込を先に整えると効果が出やすいです。手入力の50〜70%圧縮を目安に、月あたりの処理時間を大きく減らせる可能性があります。");
+            else if (docs >= 100) comments.push("書類が月" + docs + "枚あるため、自動取込とテンプレート化で月末の集中を分散しやすくなります。");
+            if (outsourceMonthly >= 50000) comments.push("税理士・記帳代行への支払いが月" + yen(outsourceMonthly) + "と高めです。クラウドで自社でも数字が見える状態を作ると、委託範囲の見直し（内製化支援）で費用対効果を検討しやすくなります。委託費そのものは削減見込みに含めていないため、実際の見直し効果は別途確認が必要です。");
+            else if (outsourceMonthly > 0 && getHandler() === "outsourced") comments.push("外部委託中心の体制のため、クラウド会計で委託先と同じ数字をリアルタイムに見る運用にすると、資料の受け渡しや確認の往復が減ります。");
+            if (payrollCount >= 10) comments.push("給与計算の対象が" + payrollCount + "名いるため、給与のクラウド化と会計連携で、毎月の計算・振込・明細配布の手間もあわせて見直す価値があります。");
+            if (getHandler() === "owner" && hours >= 20) comments.push("経営者ご自身が月に" + hours + "時間経理に使っている計算です。圧縮できた時間は本業や営業に回せるため、時間単価（¥3,000/時間）以上の価値として捉えると判断しやすくなります。");
+            if (getYearEnd() === "yes") comments.push("年末調整・決算を外注しているため、日々の入力が整うと外注先へ渡す資料の準備も早くなり、決算期の集中が和らぎます。");
+            if (!comments.length) comments.push("現在の入力では、まず明細の自動取込と領収書の撮影取込から始めると、手入力の圧縮効果を実感しやすくなります。");
+            commentEl.textContent = comments.slice(0,2).join(" ");
+          }
+          var premiseEl = document.getElementById("simWagePremise");
+          if (premiseEl) premiseEl.textContent = "前提：" + WAGE_LABEL[getHandler()] + "で計算しています。担当者を切り替えると時給換算も自動で切り替わります（金額は下で調整できます）。";
         }
         getHours = bindPair("simHours", "simHoursNum", calc);
         getWage = bindPair("simWage", "simWageNum", calc);
         getDocs = bindPair("simDocs", "simDocsNum", calc);
         getIntro = bindPair("simIntro", "simIntroNum", calc);
+        getOutsource = bindPair("simOutsource", "simOutsourceNum", calc);
+        getPayroll = bindPair("simPayroll", "simPayrollNum", calc);
+        // Handler switching updates wage
+        document.querySelectorAll('input[name="simHandler"]').forEach(function(el){
+          el.addEventListener("change", function(){
+            var w = WAGE_MAP[el.value] || 1500;
+            var wageRange = document.getElementById("simWage"); var wageNum = document.getElementById("simWageNum");
+            if (wageRange) wageRange.value = w; if (wageNum) wageNum.value = w;
+            calc();
+          });
+        });
+        document.querySelectorAll('input[name="simYearEnd"]').forEach(function(el){ el.addEventListener("change", calc); });
         calc();
       })();
     </script>
@@ -1678,7 +2191,8 @@
             });
           }
         }
-        ["simHours", "simHoursNum", "simWage", "simWageNum", "simDocs", "simDocsNum", "simIntro", "simIntroNum"].forEach(function (id) {
+        document.querySelectorAll('input[name="simHandler"], input[name="simYearEnd"]').forEach(function(el){ el.addEventListener("change", function(){ carryState.simTouched = true; applyCarryToAll();});});
+ ["simHours", "simHoursNum", "simWage", "simWageNum", "simDocs", "simDocsNum", "simIntro", "simIntroNum", "simOutsource", "simOutsourceNum", "simPayroll", "simPayrollNum"].forEach(function (id) {
           var el = document.getElementById(id);
           if (!el) return;
           var markSim = function () { carryState.simTouched = true; applyCarryToAll(); };
